@@ -3,6 +3,7 @@
 html,body{height:100%;font:normal 16px "Arial",Verdana,Tahoma}
 .b-page{position:relative;min-height:100%}
 .chart{display:block;width:610px;height:221px;border:0}
-.options__list{margin:0;padding:0;list-style:none}
+.options{width:600px;}
+.options__list{float:right;margin:0;padding:0;list-style:none}
 .options__item{display:inline-block;cursor:pointer;}
 .options__item_state_active{font-weight:bold}

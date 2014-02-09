@@ -6,12 +6,14 @@
     $('.options__item').on('click', function (e) {
         e.preventDefault();
 
-        var activeClassName = 'options__item_state_active';
+        var activeClassName = 'options__item_state_active',
+            activeElement = $('.' + activeClassName);
 
-        $('.' + activeClassName).removeClass(activeClassName);
-        $(this).addClass(activeClassName);
-
-        chart.attr('src', 'http://charting.vwdservices.com/hchart/v1/telegraaf/template/price/iframe?culture=nl-NL&series=issueid:' + graphId + '&period=P'+ $(this).attr('data-id'));
+        if (this !== activeElement[0]) {
+            activeElement.removeClass(activeClassName);
+            $(this).addClass(activeClassName);
+            chart.attr('src', 'http://charting.vwdservices.com/hchart/v1/telegraaf/template/price/iframe?culture=nl-NL&series=issueid:' + graphId + '&period=P'+ $(this).attr('data-id'));
+        }
 
     });
 
