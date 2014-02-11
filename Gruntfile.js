@@ -16,7 +16,8 @@ module.exports = function (grunt) {
             css: {
                 files: ['stylus/*.styl'],
                 tasks: ['stylus:compile']
-            }
+            },
+
         },
 
         stylus: {
@@ -78,5 +79,6 @@ module.exports = function (grunt) {
     // Our tasks
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('deploy', ['ftp-deploy:build']);
+    grunt.registerTask('min', ['uglify']);
 
 };
