@@ -58,6 +58,8 @@ It's your code. I don't know why you need to use "class" attribute to save data,
 
 Итог: Логика лежит внутри js-файла. Один event-handler. Всем БЭМ
 
+Это код, который сейчас работает на проекте. Жуткий код.
+
 ```js
 
     function getKoersGraphCode(){
